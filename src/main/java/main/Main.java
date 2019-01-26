@@ -28,17 +28,17 @@ public class Main {
 
 
         System.out.println("Christmas time ...");
-        products.forEach(p->ProductService.christmasDiscount(p));
+        products.forEach(p->p.setDiscount(ProductService.christmasDiscount(p.getCost())));
         products.forEach(p->p.showProductInfo());
 
 
         System.out.println("\n\nNew Yer time ...");
-        products.forEach(p->ProductService.newYearDiscount(p));
+        products.forEach(p->p.setDiscount(ProductService.newYearDiscount(p.getCost())));
         products.forEach(p->p.showProductInfo());
 
 
         System.out.println("\n\nEaster time ...");
-        products.forEach(p->ProductService.easterDiscount(p));
+        products.forEach(p->p.setDiscount(ProductService.easterDiscount(p.getCost())));
         products.forEach(p->p.showProductInfo());
 
     }
